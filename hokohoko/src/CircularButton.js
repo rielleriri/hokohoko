@@ -1,7 +1,8 @@
 import React from 'react'
 
 export default class CircularButton extends React.Component {
-    constructor(props) {
+   constructor(props) {
+        super(props);
         this.state = {
             left: props.left,
             top: props.top

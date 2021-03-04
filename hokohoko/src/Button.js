@@ -2,6 +2,7 @@ import React from 'react'
 
 export default class Button extends React.Component {
     constructor(props) {
+        super(props);
         this.state = {
             text: props.text,
             left: props.left,
@@ -14,6 +15,11 @@ export default class Button extends React.Component {
         var text = this.state.text;
 
         const myStyle = {
+            fontSize: "16px",
+            lineHeight: "180%",
+            textAlign: "center",
+            letterSpacing: "0.5px",
+            color: "#FFFFFF",
             display: "flex",
             flexDirection: "row",
             alignItems: "center",
