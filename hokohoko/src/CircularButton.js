@@ -1,9 +1,8 @@
 import React from 'react'
 
-export default class Button extends React.Component {
+export default class CircularButton extends React.Component {
     constructor(props) {
         this.state = {
-            text: props.text,
             left: props.left,
             top: props.top
         }
@@ -14,23 +13,16 @@ export default class Button extends React.Component {
         var text = this.state.text;
 
         const myStyle = {
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            padding: "16px",
             position: "absolute",
-            width: "133px",
-            height: "54px",
+            width: "60px",
+            height: "60px",
             left: this.state.left,
             top: this.state.top,
-            background: "#19B09F",
-            boxShadow: "0px 10px 30px rgba(64, 191, 255, 0.24)",
-            borderRadius: "50px",
+            filter: "drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))",
         };
 
         return (
             <button style={myStyle}>
-                {text}
             </button>
         );
     }
