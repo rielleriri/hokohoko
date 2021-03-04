@@ -1,0 +1,29 @@
+.header {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    position: absolute;
+    top: 0px;
+    z-index: 100;
+  }
+
+.header__back {
+    width: 100px;
+    object-fit: contain;
+    align-items: center;
+    color: rgb(66, 136, 112);
+    font-size: 15px;
+    font-weight: 500;
+
+    margin: 0 20px;
+}
+
+.header__name {
+    font-size: 20px;
+    font-weight: 800;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+}
