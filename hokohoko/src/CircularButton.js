@@ -1,6 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheck, faPen, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faPen, faTimes, faPlus } from '@fortawesome/free-solid-svg-icons';
 
 export default class CircularButton extends React.Component {
    constructor(props) {
@@ -27,10 +27,14 @@ export default class CircularButton extends React.Component {
             borderRadius: "60px",
         };
 
-        var icon = <FontAwesomeIcon icon={faCheck} size="lg" color="white" />
+        var icon = <FontAwesomeIcon icon={faPlus} size="lg" color="white" />
 
         if (this.state.icon === "faPen") {
             icon = <FontAwesomeIcon icon={faPen} size="lg" color="white" />
+        } 
+
+        if (this.state.icon === "faCheck") {
+            icon = <FontAwesomeIcon icon={faCheck} size="lg" color="white" />
         } 
 
         if (this.state.icon === "faTimes") {
