@@ -16,12 +16,9 @@ export default class Button extends React.Component {
 
         const myStyle = {
             fontSize: "16px",
-            lineHeight: "180%",
             textAlign: "center",
             letterSpacing: "0.5px",
             color: "#FFFFFF",
-            display: "flex",
-            flexDirection: "row",
             alignItems: "center",
             padding: "16px",
             position: "absolute",
