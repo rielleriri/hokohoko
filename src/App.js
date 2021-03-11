@@ -2,6 +2,7 @@ import React, { useEffect, useState, Component } from 'react';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import { createWorker } from 'tesseract.js';
 import './App.css';
+import FileInput from './FileInput.js'
 
 const NavBar = () => (
   <div className="navbar">
@@ -22,7 +23,7 @@ const Template = (props) => (
         <li>Task 2</li>
         <li>Task 3</li>
     </ul>
-    {PerformOCR("http://localhost:3000/lazada.jpg")}
+    <FileInput />
   </div>
 );
 
