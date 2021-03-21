@@ -1,5 +1,30 @@
-.navbar {
-  background-color: #4169e1;
+.btn-custom {
+  background-color: #19B09F;
+  color: white;
+}
+
+.nav {
+  background-color: #19B09F;
+}
+
+.navbar { 
+  background-color: #19B09F;
+} 
+
+.nav-link{
+  color: white !important;
+  font-weight: bold;
+}
+
+.active {
+  background-color: red;
+  color: black;
+}
+
+/* .navbar-nav.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
 }
 
 .navbar h3 {
@@ -15,9 +40,9 @@
   padding: 10px;
   color: #fff;
   text-decoration: none;
-}
+} */
 
-.page-info {
+/* .page-info {
   padding: 10px;
 }
 
@@ -28,4 +53,5 @@
 .Completed {
   color: #ff6347;
   text-decoration: line-through;
-}
+} */
+
