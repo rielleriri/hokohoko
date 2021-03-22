@@ -1,31 +1,22 @@
-.navbar {
-  background-color: #4169e1;
+.App {
+  text-align: center;
 }
 
-.navbar h3 {
-  display: inline-block;
-  text-align: left;
-  padding: 10px;
-  color: black;
-  text-decoration: none;
+.App-logo {
+  height: 40vmin;
 }
 
-.navbar a {
-  display: inline-block;
-  padding: 10px;
-  color: #fff;
-  text-decoration: none;
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
 
-.page-info {
-  padding: 10px;
-}
-
-.Current {
-  color: #2e8b57;
-}
-
-.Completed {
-  color: #ff6347;
-  text-decoration: line-through;
+.App-link {
+  color: #09d3ac;
 }
