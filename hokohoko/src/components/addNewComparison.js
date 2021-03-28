@@ -38,7 +38,7 @@ class addNewComparison extends Component {
         const { data: { text } } = await this.worker.recognize(file.file);
         this.setState({
             isProcessing : false,
-            ocrText : /([A-Z0-9,.$]+)/.exec(/(\$(?:[\s\S](?!\$))+$)/.exec(text)[1])[1]
+            ocrText : /([A-Z0-9,.$]+)/.exec(/((?:[\s\S](?!\$))+$)/.exec(text)[1])[1]
         })
     };
     updateProgressAndLog(m){
