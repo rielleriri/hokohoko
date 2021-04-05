@@ -38,10 +38,18 @@ class addNewComparison extends Component {
         // Sending the File Object into the Recognize function to
         // parse the data
         const { data: { text } } = await this.worker.recognize(file.file);
-        this.setState({
+        
+        if(/[$]/g.test(text)) {
+            this.setState({
             isProcessing: false,
-            ocrText: /([A-Z0-9,.$]+)/.exec(/((?:[\s\S](?!\$))+$)/.exec(text)[1])[1]  
-        })
+            ocrText: /([A-Z0-9,.$]+)/.exec(/((?:[\s\S](?!\$))+$)/.exec(text)[1])[1],
+            })
+        } else{
+            this.setState({
+                isProcessing: false,
+                ocrText: 'Error'
+            })
+        }
 
         
     };
