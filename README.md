@@ -42,6 +42,8 @@ Ifconfig
 
 ###### *Note: Make sure the hokohoko app is still running on VS Code!*
 ##### On the mobile browser, you should see the menu button on the top-right hand corner which you can click to reveal the `Lists` and `New Comparisons` tabs
+<img src="https://user-images.githubusercontent.com/61452236/113671871-8520d580-96e9-11eb-871a-3726420bdf7c.jpg" width="200" height="400" /> <img src="https://user-images.githubusercontent.com/61452236/113672255-0ed0a300-96ea-11eb-817b-ae375868e667.jpg" width="200" height="400" />
+
 
 </br>
 
