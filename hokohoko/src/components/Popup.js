@@ -29,7 +29,7 @@ class Popup extends Component {
                         <Button variant="success" type="submit" onClick={() => this.props.handleSubmit(this.state.name)}>
                             Submit
                         </Button>
-                        <Button variant="secondary" onClick={this.props.closeModal}>Close</Button>
+                        <Button variant="danger" onClick={this.props.closeModal}>Close</Button>
 
                     </Modal.Footer>
                 </Modal>

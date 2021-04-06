@@ -5,7 +5,7 @@ import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
 import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css';
 import 'filepond/dist/filepond.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Form, Modal } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import Popup from './Popup';
 import Comparison from './Comparison';
 
@@ -38,10 +38,18 @@ class addNewComparison extends Component {
         // Sending the File Object into the Recognize function to
         // parse the data
         const { data: { text } } = await this.worker.recognize(file.file);
-        this.setState({
+        
+        if(/[$]/g.test(text)) {
+            this.setState({
             isProcessing: false,
-            ocrText: /([A-Z0-9,.$]+)/.exec(/((?:[\s\S](?!\$))+$)/.exec(text)[1])[1]  
-        })
+            ocrText: /([A-Z0-9,.$]+)/.exec(/((?:[\s\S](?!\$))+$)/.exec(text)[1])[1],
+            })
+        } else{
+            this.setState({
+                isProcessing: false,
+                ocrText: 'Error'
+            })
+        }
 
         
     };
@@ -81,7 +89,7 @@ class addNewComparison extends Component {
     openModal = () => this.setState({ isOpen: true });
     closeModal = () => this.setState({ isOpen: false });
     handleSubmit = (name) => {
-        this.setState({platform: name, submitted: true})
+        this.setState({platform: name, submitted: true, isOpen: false})
     }
     
 
@@ -153,7 +161,8 @@ class addNewComparison extends Component {
                                 end_price={this.state.ocrText} 
                                 onPriceChange={this.handlePriceChange} 
                                 platform={this.state.platform}  
-                                onPlatformChange={this.handlePlatformChange} />
+                                onPlatformChange={this.handlePlatformChange}
+                                 />
                             </div>
                         </div>
 

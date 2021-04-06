@@ -1,9 +1,7 @@
-import React, { Component } from 'react';
-import { useState } from 'react';
-import { Container, Nav, Navbar, NavDropdown, Form, Button, FormControl, Row, Col, InputGroup } from "react-bootstrap";
-import { Accordion, Card } from "react-bootstrap";
+import { React, Component } from 'react';
+import { Accordion, Card, Container } from "react-bootstrap";
 import Comparison from "./Comparison";
-import Lists from "./Lists";
+import ProductList from './ProductList';
 
 
 class comparisonList extends Component {
@@ -16,7 +14,7 @@ class comparisonList extends Component {
 
           <Container fluid>
             <Accordion defaultActiveKey="">
-
+              {/* 
               <Card>
                 <Accordion.Toggle as={Card.Header} eventKey="0">
                   iPad Pro
@@ -43,9 +41,9 @@ class comparisonList extends Component {
                   </Card.Body>
                 </Accordion.Collapse>
               </Card>
-
+ */}
+              <ProductList />
             </Accordion>
-            <Lists />
           </Container>
 
         </div>
