@@ -1,29 +1,37 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { Nav, Navbar } from "react-bootstrap";
 import addNewComparison from './components/addNewComparison';
 import comparisonList from './components/comparisonList';
 
 class App extends Component {
   render() {
     return (
-      <div>
         <Router>
-          <div>
-            <h2>HokoHoko</h2>
-            <nav className="navbar navbar-expand-lg navbar-light bg-light">
-              <ul className="navbar-nav mr-auto">
-                <li><Link to={'/list'} className="nav-link">Lists</Link></li>
-                <li><Link to={'/new'} className="nav-link">Add New Comparison</Link></li>
-              </ul>
-            </nav>
-            <hr />
+            <Navbar className="custom" bg="light" expand="sm">
+              <Navbar.Brand href="/">
+                <img
+                  alt=""
+                  src="/images/icon.png"
+                  width="30"
+                  height="30"
+                  className="d-inline-block align-top"
+                />{' '}
+              Hokohoko
+              </Navbar.Brand>
+              <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              <Navbar.Collapse id="basic-navbar-nav">
+                <Nav>
+                  <Nav.Link activeClassName="active" eventKey="/list" href="/list">Lists</Nav.Link>
+                  <Nav.Link activeClassName="active" eventKey="/new" href="/new">New Comparison</Nav.Link>
+                </Nav>
+              </Navbar.Collapse>
+            </Navbar>
             <Switch>
               <Route exact path='/list' component={comparisonList} />
               <Route path='/new' component={addNewComparison} />
             </Switch>
-          </div>
         </Router>
-      </div>
     );
   }
 }

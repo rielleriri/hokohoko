@@ -1,3 +1,16 @@
+.btn-custom {
+  background-color: #19B09F;
+  color: white;
+}
+
+.nav {
+  background-color: #19B09F;
+}
+
+.navbar { 
+  background-color: #19B09F;
+} 
+
 .App {
   text-align: center;
 }
@@ -17,6 +30,7 @@
   color: white;
 }
 
-.App-link {
+/* .App-link {
   color: #09d3ac;
-}
+} */
+

@@ -9,10 +9,11 @@ class comparisonList extends Component {
   render() {
     return (
       <div>
-        <h3>Your Lists</h3>
-        <div>
+        <Container fluid>
+          <h3>Your Lists</h3>
+          <div>
 
-          <Container fluid>
+
             <Accordion defaultActiveKey="">
               {/* 
               <Card>
@@ -44,9 +45,10 @@ class comparisonList extends Component {
  */}
               <ProductList />
             </Accordion>
-          </Container>
 
-        </div>
+
+          </div>
+        </Container>
       </div>
     );
   }
