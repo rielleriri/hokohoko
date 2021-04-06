@@ -1,0 +1,28 @@
+  
+header {
+    background-color: #272727;
+  }
+  
+  .nav-container {
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
+    justify-content: center;
+  }
+  
+  .nav-child {
+    flex: 1 1 auto;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+  }
+  
+  .nav-link {
+    font-size: 4vw;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .nav-link:hover {
+    color: #FE7831;
+  }
