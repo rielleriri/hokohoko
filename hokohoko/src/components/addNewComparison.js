@@ -43,7 +43,7 @@ class addNewComparison extends Component {
         if(/[$]/g.test(text)) {
             this.setState({
             isProcessing: false,
-            ocrText: /([SGD 0-9,.$]+)/.exec(/((?:[\s\S](?!SGD|\$))+$)/.exec(text)[1])[1],
+            ocrText: /([SGD 0-9,.$]+)/.exec(/((?:[\s\S](?!SGD|\$))+$)/.exec(text)[1])[1].replace(/\s/g,''),
             })
         } else{
             this.setState({
