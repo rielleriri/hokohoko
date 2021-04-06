@@ -1,3 +1,4 @@
+  
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -16,7 +17,7 @@ class AddItem extends Component {
     return (
       <div className='form-container'>
         <form className='form-child-big' onSubmit={this.onAdd}>
-          <input maxLength='25' placeholder='Add Item Name' />
+          <input maxLength='25' placeholder='Type something here' />
           <br />
           <br />
           <button>Add</button>

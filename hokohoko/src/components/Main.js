@@ -16,14 +16,12 @@ class Main extends Component {
               items={this.props.items}
               onDelete={this.props.onDelete}
               onEdit={this.props.onEdit}
-              onUpload={this.props.onUpload}
               {...props} />;
           }} />
           <Route path='/add' render={(props) => {
             return <AddItem onAdd={this.props.onAdd} {...props} />
           }} />
           <Route path='/edit_item/:id' component={EditItem} />
-          <Route path='/upload_item/:id' component={UploadItem} />
           <Route path='/new' component={addNewComparison} />
         </Switch>
       </main>

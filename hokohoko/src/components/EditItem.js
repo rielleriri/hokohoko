@@ -18,21 +18,12 @@ class EditItem extends Component {
         <form className='form-child-big' onSubmit={this.onEdit}>
           <input
             maxLength='25'
-            placeholder='Edit item name'
+            placeholder='Type something here'
             defaultValue={this.props.location.name}
-          /><button>Update</button>
+          />
           <br />
-          <input
-            maxLength='25'
-            placeholder='Edit item price'
-            defaultValue={this.props.location.price}
-          /><button>Update</button>
           <br />
-          <input
-            maxLength='25'
-            placeholder='Edit item platform'
-            defaultValue={this.props.location.platform}
-          /><button>Update</button>
+          <button>Update</button>
         </form>
         <Link className='form-child-small back-link' to='/'>Back</Link>
       </div>
