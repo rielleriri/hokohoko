@@ -17,6 +17,7 @@ class addNewComparison extends Component {
         this.state = {
             isProcessing: false,
             ocrText: '',
+            platform: '',
             pctg: '0.00'
         }
         this.pond = React.createRef();
@@ -28,6 +29,7 @@ class addNewComparison extends Component {
         this.setState({
             isProcessing: true,
             ocrText: '',
+            platform: '',
             pctg: '0.00'
         })
         // Loading tesseract.js functions
@@ -43,11 +45,13 @@ class addNewComparison extends Component {
             this.setState({
             isProcessing: false,
             ocrText: /([A-Z0-9,.$]+)/.exec(/((?:[\s\S](?!\$))+$)/.exec(text)[1])[1],
+            platform: '',
             })
         } else{
             this.setState({
                 isProcessing: false,
-                ocrText: 'Error'
+                ocrText: 'Error',
+                platform: '',
             })
         }
 
@@ -81,25 +85,18 @@ class addNewComparison extends Component {
 
     // Modal Popup
     state = {
-        isOpen: true,
         platform: '',
-        submitted: false
     }
-
-    openModal = () => this.setState({ isOpen: true });
-    closeModal = () => this.setState({ isOpen: false });
-    handleSubmit = (name) => {
-        this.setState({platform: name, submitted: true, isOpen: false})
-    }
-    
 
     handlePriceChange = end_price => {
         this.setState({ end_price })
       }
     
-      handlePlatformChange = platform => {
+    handlePlatformChange = platform => {
         this.setState({ platform })
       }
+
+    handleChange = (e) => this.setState({ platform: e.target.value})
 
     render() {
         return (
@@ -145,24 +142,6 @@ class addNewComparison extends Component {
                                     '...........'
                                     : this.state.ocrText.length === 0 ? "No Valid Text Found / Upload Image to Parse Text From Image" : this.state.ocrText}
                                 </p>
-                                 {/* This button opens a popup asking for the platform */}
-                                <Button variant="primary" disabled={this.state.ocrText.length === 0 ? true : false} onClick={this.openModal}>Continue</Button>
-
-                                {this.state.isOpen ?
-                                    <Popup
-                                        closeModal={this.closeModal}
-                                        isOpen={this.state.isOpen}
-                                        handleSubmit={this.handleSubmit}
-                                    />
-                                    :
-                                    null
-                                }
-                                <Comparison 
-                                end_price={this.state.ocrText} 
-                                onPriceChange={this.handlePriceChange} 
-                                platform={this.state.platform}  
-                                onPlatformChange={this.handlePlatformChange}
-                                 />
                             </div>
                         </div>
 
@@ -173,10 +152,24 @@ class addNewComparison extends Component {
                     </div>
 
                 </div>
+                <div class="card-body">
+                         <div className='form-container'>
+                            <form className='form-child-big' onChange={this.handleChange} value={this.state.name} placeholder="Platform" >
+                                <input maxLength='25' placeholder='Enter Platform'/>
+                            </form>
+                         </div>
+                        <Comparison 
+                        end_price={this.state.ocrText} 
+                        onPriceChange={this.handlePriceChange} 
+                        platform={this.state.platform}  
+                        onPlatformChange={this.handlePlatformChange}
+                        />
+                </div>
 
             </div>
         );
     }
 }
+  
 
 export default addNewComparison;

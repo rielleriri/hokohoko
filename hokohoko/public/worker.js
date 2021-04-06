@@ -1,7 +1,7 @@
-var CACHE_NAME = 'pwa-task-manager';
+var CACHE_NAME = 'HokoHoko';
 var urlsToCache = [
   '/',
-  '/completed'
+  '/lists'
 ];
 
 // Install a service worker
