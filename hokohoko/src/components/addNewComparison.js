@@ -5,7 +5,7 @@ import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
 import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css';
 import 'filepond/dist/filepond.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 import Popup from './Popup';
 import Comparison from './Comparison';
 
@@ -104,7 +104,7 @@ class addNewComparison extends Component {
     render() {
         return (
             <div>
-
+                <Container fluid>
                 <Popup />
                 <h3>Add a new comparison:</h3>
                 <div className="App">
@@ -173,7 +173,7 @@ class addNewComparison extends Component {
                     </div>
 
                 </div>
-
+                </Container>
             </div>
         );
     }
