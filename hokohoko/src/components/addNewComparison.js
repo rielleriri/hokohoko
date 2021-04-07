@@ -8,6 +8,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from "react-bootstrap";
 import Popup from './Popup';
 import Comparison from './Comparison';
+import { Link } from 'react-router-dom';
+
 
 registerPlugin(FilePondPluginImagePreview);
 
@@ -23,6 +25,7 @@ class addNewComparison extends Component {
         this.pond = React.createRef();
         this.worker = React.createRef();
         this.updateProgressAndLog = this.updateProgressAndLog.bind(this);
+        this.onUpload = this.onUpload.bind(this);
     }
     // OCR
     async doOCR(file) {
@@ -98,11 +101,20 @@ class addNewComparison extends Component {
 
     handleChange = (e) => this.setState({ platform: e.target.value})
 
+    //when user click "Upload", push data to the list page
+    onUpload(e) {
+        this.props.onUpload(e);
+        this.props.history.push('/');
+    }
+    
     render() {
         return (
             <div>
 
                 <Popup />
+                <Link className='form-child-small back-link' to='/'>
+                    Cancel
+                </Link>
                 <h3>Add a new comparison:</h3>
                 <div className="App">
                     <div className="container">
@@ -164,6 +176,11 @@ class addNewComparison extends Component {
                         platform={this.state.platform}  
                         onPlatformChange={this.handlePlatformChange}
                         />
+                </div>
+                <div className='form-container'>
+                    <form className='form-child-big' onSubmit={this.onUpload}>
+                        <button>Upload</button>
+                    </form>
                 </div>
 
             </div>

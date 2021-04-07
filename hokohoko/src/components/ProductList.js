@@ -3,15 +3,27 @@ import Product from './Product';
 
 // No. of products = No. of cards in accordion
 let products = [
-    {id:0, name:"A"} 
+    { id: 0, name: "A", description: "First", platforms: [{name: "Lazada", end_price: 50}, {name: "Grab", end_price: 20}] },
+    { id: 1, name: "B", description: "Second", platforms: [{name: "Shoppee", end_price: 7}] }
 ]
 
 const productList = products.map((product) =>
-<div>
-<Product />
-</div>
+    <div>
+        <Product key={product.id}
+            id={product.id}
+            name={product.name}
+            description={product.description}
+            platforms={product.platforms}
+        />
+    </div>
 );
+
+
+
 class ProductList extends Component {
+    constructor(props) {
+        super(props);
+    }
     render() {
         return (
             <div>

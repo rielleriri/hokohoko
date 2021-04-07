@@ -14,9 +14,9 @@ class Header extends Component {
             <li className='nav-child'>
               <Link className='nav-link' to='/add'>Add List</Link>
             </li>
-            <li className='nav-child'>
+            {/* <li className='nav-child'>
               <Link className='nav-link' to='/new'>Upload</Link>
-            </li>
+            </li> */}
           </ul>
         </nav>
       </header>
