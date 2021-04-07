@@ -5,6 +5,7 @@ import addNewComparison from './components/addNewComparison';
 import comparisonList from './components/comparisonList';
 
 class App extends Component {
+  
   render() {
     return (
         <Router>

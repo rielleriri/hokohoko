@@ -2,9 +2,9 @@ import { React, Component } from 'react';
 import Product from './Product';
 
 // No. of products = No. of cards in accordion
-const products = [
-    { id: 0, name: "A", description:"First" },
-    { id: 1, name: "B", description:"Second" }
+let products = [
+    { id: 0, name: "A", description: "First", platforms: [{name: "Lazada", end_price: 50}, {name: "Grab", end_price: 20}] },
+    { id: 1, name: "B", description: "Second", platforms: [{name: "Shoppee", end_price: 7}] }
 ]
 
 const productList = products.map((product) =>
@@ -13,6 +13,7 @@ const productList = products.map((product) =>
             id={product.id}
             name={product.name}
             description={product.description}
+            platforms={product.platforms}
         />
     </div>
 );
@@ -20,6 +21,9 @@ const productList = products.map((product) =>
 
 
 class ProductList extends Component {
+    constructor(props) {
+        super(props);
+    }
     render() {
         return (
             <div>
