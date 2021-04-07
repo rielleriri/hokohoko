@@ -49,7 +49,6 @@ class Product extends Component {
                       <td>{platform.end_price}</td>
                     </tr>;
                   })}
-
                 </tbody>
 
               </Table>

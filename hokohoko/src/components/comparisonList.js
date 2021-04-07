@@ -4,6 +4,8 @@ import Comparison from "./Comparison";
 import ProductList from './ProductList';
 
 
+
+
 class comparisonList extends Component {
 
   render() {

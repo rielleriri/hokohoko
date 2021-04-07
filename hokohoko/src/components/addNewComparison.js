@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import { createWorker } from 'tesseract.js';
 import { FilePond, registerPlugin } from 'react-filepond';
 import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
-import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css';
-import 'filepond/dist/filepond.min.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Container } from "react-bootstrap";
 import Popup from './Popup';
 import Comparison from './Comparison';
+
+import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css';
+import 'filepond/dist/filepond.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 registerPlugin(FilePondPluginImagePreview);
 

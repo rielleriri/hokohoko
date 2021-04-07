@@ -27,3 +27,7 @@ code {
     margin-left: 1%;
     font-size: 1.4em;
 }
+
+.container-fluid {
+  padding-top: 15px;
+}
