@@ -86,7 +86,7 @@ componentDidMount() {
 
 // Modal Popup
 state = {
-    all: []
+    platform: ''
 }
 
 handlePriceChange = price => {
@@ -97,11 +97,12 @@ handlePlatformChange = platform => {
     this.setState({ platform })
   }
 
-handleChange = (e) => this.setState({ all: [...this.state.all, e.target.value]})
+handleChange = (e) => this.setState({ platform: e.target.value })
 
 //when user click "Upload", push data to the list page
 onUpload(e) {
     e.preventDefault();
+    e.target[0].value += "" + this.state.ocrText
     this.props.location.onUpload(e);
     this.props.history.push('/');
 }
@@ -165,7 +166,7 @@ render() {
                 <div class="card-body">
                     
                          <div className='form-container'>
-                            <form className='form-child-big' onChange={this.handleChange} onSubmit={this.onUpload} value={this.state.all} placeholder="Platform" >
+                            <form className='form-child-big' onChange={this.handleChange} onSubmit={this.onUpload} value={this.state.platform} placeholder="Platform" >
                                 <input maxLength='25' placeholder='Enter Platform'/>
                                 <button>Update</button>
                             </form>
