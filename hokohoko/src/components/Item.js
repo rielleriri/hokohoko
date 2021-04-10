@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Accordion, Card, Table } from 'react-bootstrap';
+import { Accordion, Card, Table, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Item.css';
 
@@ -38,30 +38,11 @@ class Item extends Component {
   render() {
     return (
       <div>
-      <div className='five-container'>
-        <div className='name five-child'>{this.props.item.name}</div>
-        <div className='price five-child'>{this.props.item.price.split( '~' ).map( ( item ) => <> { item } {" "} </>) }</div>
-        
-        <div className='edit five-child'>
-          <Link className='edit-link' to={{
-            pathname: `/edit_item/${this.props.item.id}`,
-            name: this.props.item.name,
-            price:this.props.item.price,
-            onEdit: this.onEdit
-          }}>
-            Edit
-          </Link>
-        </div>
-        <div className='upload five-child'>
-          
-        </div>
-      </div>
-      <div>
         <Accordion defaultActiveKey="">
           <Card>
             <Accordion.Toggle as={Card.Header} eventKey={this.props.item.id.toString()}>
               {this.props.item.name}
-              <button onClick={this.onDelete}>Delete</button>
+              <Link className="float-right" variant="outline-danger" onClick={this.onDelete}>Delete</Link>
             </Accordion.Toggle>
             <Accordion.Collapse eventKey={this.props.item.id.toString()}>
               <Card.Body>
@@ -85,20 +66,29 @@ class Item extends Component {
                   </tbody>
 
                 </Table>
+                <Link className="edit-link" to={{
+                    pathname: `/edit_item/${this.props.item.id}`,
+                    name: this.props.item.name,
+                    onEdit: this.onEdit
+                  }} >
+                  <Button variant="outline-primary">Edit</Button>
+                </Link>
                 <Link className='upload-link' to={{
                     pathname: `/upload_item/${this.props.item.id}`,
                     name: this.props.item.name,
                     price: this.props.item.price,
                     onUpload: this.onUpload
                   }}> 
+                  <Button className="float-right"variant="primary">
                   Upload
+                 </Button>
                 </Link>
               </Card.Body>
             </Accordion.Collapse>
           </Card>
         </Accordion>
         </div>
-        </div>
+        
     );
   }
 }

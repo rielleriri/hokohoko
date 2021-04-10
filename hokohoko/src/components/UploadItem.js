@@ -6,6 +6,7 @@ import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
 import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css';
 import 'filepond/dist/filepond.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import{ Button } from 'react-bootstrap';
 import Comparison from './Comparison';
 
 class UploadItem extends Component {
@@ -112,7 +113,7 @@ render() {
         <div>
 
             <Link className='form-child-small back-link' to='/'>
-                Cancel
+                <Button variant="danger">Cancel</Button>
             </Link>
             <h3>Add a new comparison:</h3>
             <div className="App">
@@ -171,16 +172,6 @@ render() {
                                 <button>Update</button>
                             </form>
                          </div>
-                        <Comparison 
-                        price={this.state.ocrText} 
-                        onPriceChange={this.handlePriceChange} 
-                        platform={this.state.platform}  
-                        onPlatformChange={this.handlePlatformChange}
-                        />
-                        <div id="all">
-                            all:
-
-                        </div>
                 </div>
             </div>
         );

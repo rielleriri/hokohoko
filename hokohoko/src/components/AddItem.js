@@ -17,7 +17,7 @@ class AddItem extends Component {
     return (
       <div className='form-container'>
         <form className='form-child-big' onSubmit={this.onAdd}>
-          <input maxLength='25' placeholder='Type something here' />
+          <input maxLength='25' placeholder='Type product name here' />
           <br />
           <br />
           <button>Add</button>

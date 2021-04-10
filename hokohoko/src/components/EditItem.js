@@ -22,12 +22,6 @@ class EditItem extends Component {
             defaultValue={this.props.location.name}
           />
           <br />
-          <input
-            maxLength='25'
-            placeholder='Type price here'
-            defaultValue={this.props.location.price}
-          />
-          <br />
           <button>Update</button>
         </form>
         <Link className='form-child-small back-link' to='/'>Back</Link>
