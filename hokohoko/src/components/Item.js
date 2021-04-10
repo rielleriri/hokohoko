@@ -29,7 +29,7 @@ class Item extends Component {
     e.preventDefault();
     let newItem = this.props.item;
     if (e.target[0].value.length !== 0) {
-      newItem.price += e.target[0].value + "~";
+      newItem.price += "~" + e.target[0].value;
       this.props.onUpload(newItem);
     };
   }
@@ -68,6 +68,7 @@ class Item extends Component {
                 <Table striped bordered>
                   <thead>
                     <tr>
+                      <th>Blank</th>
                       <th>
                         Platform
                         </th>
