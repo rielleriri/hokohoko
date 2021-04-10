@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import addNewComparison from './addNewComparison';
-import comparisonList from './comparisonList';
 import Header from './Header';
 import Main from './Main';
 
@@ -17,13 +16,14 @@ class App extends Component {
     this.handleAdd = this.handleAdd.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
     this.handleEdit = this.handleEdit.bind(this);
+    this.handleUpload = this.handleUpload.bind(this);
   }
 
   handleAdd(e) {
     e.preventDefault();
     let newItems = this.state.items;
     if (e.target[0].value.length !== 0) {
-      newItems.push({name: e.target[0].value, id: this.state.nextId});
+      newItems.push({name: e.target[0].value, price: "", id: this.state.nextId});
       this.setState({
         items: newItems,
         nextId: this.state.nextId + 1
@@ -45,6 +45,22 @@ class App extends Component {
     newItems = newItems.map(item => {
       if (item.id === itemToBeEdited.id) {
         item.name = itemToBeEdited.name;
+        item.price = itemToBeEdited.price;
+      }
+      return item;
+    });
+
+    this.setState({
+      items: newItems
+    });
+  }
+
+  handleUpload(itemToBeUploaded) {
+    let newItems = this.state.items;
+    newItems = newItems.map(item => {
+      if (item.id === itemToBeUploaded.id) {
+        item.price = itemToBeUploaded.price;
+
       }
       return item;
     });
@@ -64,6 +80,7 @@ class App extends Component {
           onAdd={this.handleAdd}
           onDelete={this.handleDelete}
           onEdit={this.handleEdit}
+          onUpload={this.handleUpload}
         />
       </div>
     );

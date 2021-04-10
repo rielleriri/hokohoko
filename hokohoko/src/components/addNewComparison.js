@@ -6,7 +6,6 @@ import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css
 import 'filepond/dist/filepond.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from "react-bootstrap";
-import Popup from './Popup';
 import Comparison from './Comparison';
 import { Link } from 'react-router-dom';
 
@@ -111,7 +110,6 @@ class addNewComparison extends Component {
         return (
             <div>
 
-                <Popup />
                 <Link className='form-child-small back-link' to='/'>
                     Cancel
                 </Link>

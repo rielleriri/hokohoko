@@ -5,14 +5,14 @@ class Comparison extends Component {
     super(props);
     this.state = {
       platform: '',
-      end_price: ''
+      price: ''
     };
   }
 
   render() {
     return (
       <div>
-      <div>The price is: {this.props.end_price}</div>
+      <div>The price is: {this.props.price}</div>
       <div>The platform is: {this.props.platform}</div>
     </div>
     )

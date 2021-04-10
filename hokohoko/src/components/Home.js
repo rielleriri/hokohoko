@@ -6,6 +6,16 @@ import { Accordion } from "react-bootstrap";
 
 
 class Home extends Component {
+
+
+  renderNested = (row,i) => {
+    return (
+      <div key={i}>
+        {this.renderNested}
+      </div>
+    )
+  }
+
   render() {
     let items = this.props.items.map((item) => {
       return (
@@ -13,9 +23,9 @@ class Home extends Component {
           key={item.id}
           item={item}
           price={item.price}
-          platform={item.platform}
           onDelete={this.props.onDelete}
           onEdit={this.props.onEdit}
+          onUpload={this.props.onUpload}
         />
       );
     });

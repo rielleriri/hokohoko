@@ -1,14 +1,18 @@
-.three-container {
+.five-container {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     height: 100%;
   }
   
-  .three-child {
+  .five-child {
     flex: 1 1 30px;
   }
   
   .name {
+    color: rgb(26, 21, 21);
+  }
+
+  .price {
     color: rgb(26, 21, 21);
   }
