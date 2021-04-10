@@ -77,8 +77,8 @@ class Item extends Component {
                     </tr>
                   </thead>
                   <tbody>
-                    {this.props.item.price.split('~').map((item) => {
-                        return <td>{item}</td>;
+                    {this.props.item.price.split('*').map((platformprice) => {
+                        return <tr>{platformprice.split('~').map((item)=>{return <td>{item}</td>})}</tr>;
                     })}
 
                   </tbody>
