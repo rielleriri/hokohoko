@@ -19,7 +19,7 @@ class Item extends Component {
     let newItem = this.props.item;
     if (e.target[0].value.length !== 0) {
       newItem.name = e.target[0].value;
-      newItem.price = ['Platform', 43]
+      //newItem.price = ['Platform', 43]
       this.props.onEdit(newItem);
     }
   }
@@ -38,7 +38,7 @@ class Item extends Component {
     return (
       <div className='five-container'>
         <div className='name five-child'>{this.props.item.name}</div>
-        <div className='price five-child'>{this.props.item.price}</div>
+        <div className='price five-child'>{this.props.item.price.split( ',' ).map( ( item ) => <> { item } <br /> </>) }</div>
         <div className='delete five-child'>
           <button onClick={this.onDelete}>Delete</button>
         </div>

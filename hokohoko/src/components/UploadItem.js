@@ -102,7 +102,7 @@ handleChange = (e) => this.setState({ platform: e.target.value })
 //when user click "Upload", push data to the list page
 onUpload(e) {
     e.preventDefault();
-    e.target[0].value += "" + this.state.ocrText
+    e.target[0].value += "," + this.state.ocrText
     this.props.location.onUpload(e);
     this.props.history.push('/');
 }
