@@ -97,7 +97,7 @@ handlePlatformChange = platform => {
     this.setState({ platform })
   }
 
-handleChange = (e) => this.setState({ all: [...this.state.all, e.target.value]})
+handleChange = (e) => this.setState({ all: [e.target.value]})
 
 //when user click "Upload", push data to the list page
 onUpload(e) {
