@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Accordion, Card, Table } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Item.css';
 
@@ -28,7 +29,7 @@ class Item extends Component {
     e.preventDefault();
     let newItem = this.props.item;
     if (e.target[0].value.length !== 0) {
-      newItem.price = e.target[0].value;
+      newItem.price += e.target[0].value + "~";
       this.props.onUpload(newItem);
     };
   }
@@ -36,12 +37,11 @@ class Item extends Component {
 
   render() {
     return (
+      <div>
       <div className='five-container'>
         <div className='name five-child'>{this.props.item.name}</div>
-        <div className='price five-child'>{this.props.item.price.split( '~' ).map( ( item ) => <> { item } <br /> </>) }</div>
-        <div className='delete five-child'>
-          <button onClick={this.onDelete}>Delete</button>
-        </div>
+        <div className='price five-child'>{this.props.item.price.split( '~' ).map( ( item ) => <> { item } {" "} </>) }</div>
+        
         <div className='edit five-child'>
           <Link className='edit-link' to={{
             pathname: `/edit_item/${this.props.item.id}`,
@@ -53,16 +53,51 @@ class Item extends Component {
           </Link>
         </div>
         <div className='upload five-child'>
-          <Link className='upload-link' to={{
-            pathname: `/upload_item/${this.props.item.id}`,
-            name: this.props.item.name,
-            price: this.props.item.price,
-            onUpload: this.onUpload
-          }}> 
-          Upload
-          </Link>
+          
         </div>
       </div>
+      <div>
+        <Accordion defaultActiveKey="">
+          <Card>
+            <Accordion.Toggle as={Card.Header} eventKey={this.props.item.id.toString()}>
+              {this.props.item.name}
+              <button onClick={this.onDelete}>Delete</button>
+            </Accordion.Toggle>
+            <Accordion.Collapse eventKey={this.props.item.id.toString()}>
+              <Card.Body>
+                <Table striped bordered>
+                  <thead>
+                    <tr>
+                      <th>
+                        Platform
+                        </th>
+                      <th>
+                        End Price
+                        </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {this.props.item.price.split('~').map((item) => {
+                        return <td>{item}</td>;
+                    })}
+
+                  </tbody>
+
+                </Table>
+                <Link className='upload-link' to={{
+                    pathname: `/upload_item/${this.props.item.id}`,
+                    name: this.props.item.name,
+                    price: this.props.item.price,
+                    onUpload: this.onUpload
+                  }}> 
+                  Upload
+                </Link>
+              </Card.Body>
+            </Accordion.Collapse>
+          </Card>
+        </Accordion>
+        </div>
+        </div>
     );
   }
 }

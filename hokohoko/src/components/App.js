@@ -59,8 +59,7 @@ class App extends Component {
     let newItems = this.state.items;
     newItems = newItems.map(item => {
       if (item.id === itemToBeUploaded.id) {
-        item.price = itemToBeUploaded.price;
-
+        item.price += "*";
       }
       return item;
     });
