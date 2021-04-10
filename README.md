@@ -1,7 +1,7 @@
-# A Guide to Hokohoko :grinning:
+# A Guide to HokoHoko :grinning:
 
 ### Running the application :runner:
-##### 1. Open "hokohoko" folder in VS Code
+##### 1. Open "hokohoko" folder in VS Code and change directory to src
 ##### 2. Download all necessary libraries and packages
 ```
 npm install react-scripts --save
