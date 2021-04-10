@@ -16,3 +16,9 @@
   .price {
     color: rgb(26, 21, 21);
   }
+
+  .table thead tr th:nth-child(1),
+.table tbody tr td:nth-child(1) {
+  display: none;
+}
+
