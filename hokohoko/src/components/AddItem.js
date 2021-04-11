@@ -40,26 +40,27 @@ class AddItem extends Component {
           <Modal.Header closeButton>
             <Modal.Title>Add A New Product Comparison</Modal.Title>
           </Modal.Header>
-          <Modal.Body>
-            <Form onSubmit={this.onAdd}>
+
+          <Form onSubmit={this.onAdd}>
+            <Modal.Body>
               <Form.Group controlId="itemName">
-                <Form.Label>Product Name</Form.Label>
+                <Form.Label><b>Product Name</b></Form.Label>
                 <Form.Control name="itemName" placeholder="Enter product name here" />
               </Form.Group>
-
+            </Modal.Body>
+            <Modal.Footer>
               <Form.Group>
-              <Button type="submit" variant="success" onClick={this.closeModal}>
-              Confirm
-              </Button>
+                <Button type="submit" variant="success" onClick={this.closeModal}>
+                  Confirm
+                </Button>
               </Form.Group>
-            </Form>
-          </Modal.Body>
-          <Modal.Footer>
-
-            <Button variant="danger" onClick={this.closeModal}>
-              Close
-          </Button>
-          </Modal.Footer>
+              <Form.Group>
+                <Button variant="danger" onClick={this.closeModal}>
+                  Close
+                </Button>
+              </Form.Group>
+            </Modal.Footer>
+          </Form>
         </Modal>
       </div>
     );

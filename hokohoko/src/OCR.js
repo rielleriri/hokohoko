@@ -5,7 +5,7 @@ import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
 import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css';
 import 'filepond/dist/filepond.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Form } from "react-bootstrap";
+import { Button, Card, Container, Form, Row, Col } from "react-bootstrap";
 
 import { Link } from 'react-router-dom';
 
@@ -42,14 +42,14 @@ class OCR extends Component {
         // Sending the File Object into the Recognize function to
         // parse the data
         const { data: { text } } = await this.worker.recognize(file.file);
-        
-        if(/[$]/g.test(text)) {
+
+        if (/[$]/g.test(text)) {
             this.setState({
-            isProcessing: false,
-            ocrText: /([A-Z0-9,.$]+)/.exec(/((?:[\s\S](?!\$))+$)/.exec(text)[1])[1],
-            platform: '',
+                isProcessing: false,
+                ocrText: /([A-Z0-9,.$]+)/.exec(/((?:[\s\S](?!\$))+$)/.exec(text)[1])[1],
+                platform: '',
             })
-        } else{
+        } else {
             this.setState({
                 isProcessing: false,
                 ocrText: 'Error',
@@ -57,7 +57,7 @@ class OCR extends Component {
             })
         }
 
-        
+
     };
     updateProgressAndLog(m) {
 
@@ -90,15 +90,23 @@ class OCR extends Component {
         this.props.onUpload(e);
         this.props.history.push('/');
     }
-    
+
     render() {
         return (
-            <div>
+            <Container fluid>
+                <Row>
+                    <Col>
+                        <h3>Add a new comparison:</h3>
+                    </Col>
+                    <Col>
+                        <Link className='float-right form-child-small back-link' to='/'>
+                            <Button>Back</Button>
+                    </Link>
+                    </Col>
+                </Row>
 
-                <Link className='form-child-small back-link' to='/'>
-                    Cancel
-                </Link>
-                <h3>Add a new comparison:</h3>
+                <hr />
+
                 <div className="App">
                     <div className="container">
                         <div style={{ marginTop: "10%" }} className="row">
@@ -143,35 +151,30 @@ class OCR extends Component {
 
                 </div>
                 <div class="card-body">
-                <Form onSubmit={this.onUpload}>
-              <Form.Group controlId="platform">
-                <Form.Label>Platform Name</Form.Label>
-                <Form.Control type='input' onChange={this.handleChange} name="platform" placeholder="Enter platform name here" value={this.state.name}/>
-              </Form.Group>
-              <Form.Group controlId="endPrice">
-                <Form.Label>End Price</Form.Label>
-                <Form.Control type='input' name="endPrice" placeholder="The end price will appear here" value={this.state.ocrText}/>
-              </Form.Group>
+                    <Form onSubmit={this.onUpload}>
+                        <Form.Group controlId="platform">
+                            <Form.Label><b>Platform Name</b></Form.Label>
+                            <Form.Control type='input' onChange={this.handleChange} name="platform" placeholder="Enter platform name here" value={this.state.name} />
+                        </Form.Group>
+                        <Form.Group controlId="endPrice">
+                            <Form.Label><b>End Price</b></Form.Label>
+                            <Form.Control disabled type='input' name="endPrice" placeholder="The end price will automatically appear here" value={this.state.ocrText} />
+                        </Form.Group>
 
-              <Form.Group>
-              <Button type="submit" variant="success" onSubmit={this.onUpload}>
-              Confirm
-              </Button>
-              </Form.Group>
-            </Form>
+                        <Form.Group>
+                            <Button type="submit" variant="success" onSubmit={this.onUpload}>
+                                Confirm
+                            </Button>
+                        </Form.Group>
+                    </Form>
                 </div>
-                {/* <div className='form-container'>
-                    <form className='form-child-big' onSubmit={this.onUpload}>
-                        <button>Upload</button>
-                    </form>
-                </div> */}
 
 
 
-            </div>
+            </Container>
         );
     }
 }
-  
+
 
 export default OCR;
