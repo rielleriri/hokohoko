@@ -24,7 +24,7 @@ class EditItem extends Component {
             <Container fluid>
 
                 <Row>
-                    <Col>
+                    <Col xs={9}>
                         <h3>Edit Product Name</h3>
                         <p>Change the product's name here!</p>
                     </Col>

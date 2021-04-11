@@ -95,7 +95,7 @@ class OCR extends Component {
         return (
             <Container fluid>
                 <Row>
-                    <Col>
+                    <Col xs={9}>
                         <h3>Add A New Comparison</h3>
                         <p>Upload a screenshot of a product checkout page!</p>
                     </Col>

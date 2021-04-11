@@ -30,7 +30,7 @@ class Lists extends Component {
         return (
             <Container fluid>
                 <Row>
-                    <Col>
+                    <Col xs={9}>
                         <h3>Your Product Lists</h3>
                         <p>Add a new product or select an existing one to begin comparing!</p>
                     </Col>
