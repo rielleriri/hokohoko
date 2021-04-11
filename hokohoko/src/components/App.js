@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import addNewComparison from './addNewComparison';
 import Header from './Header';
 import Main from './Main';

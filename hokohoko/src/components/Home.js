@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
+import {Button} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Item from './Item';
-import ProductList from './ProductList';
-import { Accordion } from "react-bootstrap";
 
 
 class Home extends Component {
@@ -33,12 +32,13 @@ class Home extends Component {
     return (
       <div>
         <h1>Your product lists:</h1>
+        <br />
+        <Link className= "add-product" to='/add'>
+          <Button variant="dark">Add New Product</Button>        
+        </Link>
         <div className='item-container'>
           <br />
           {items}
-          <Accordion defaultActiveKey="">
-              <ProductList />
-          </Accordion>
         </div>
       </div>
     );
