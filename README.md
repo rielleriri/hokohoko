@@ -17,6 +17,9 @@ npm start
 ```
 ##### The application should start automatically on your default web browser.
 
+If your default browser is Google Chrome, you can run HokoHoko as a Chrome extension as well by doing the following. <br>
+<img src="https://user-images.githubusercontent.com/49828224/114294438-3e5c2280-9ad1-11eb-85e2-a2ea50667162.png" width="640" height="340"> 
+
 </br>
 
 ### Manoeuvring the Application: Web Edition :computer:
@@ -25,47 +28,47 @@ npm start
 ##### In `ADD LIST`, you can add a new product for which you want to compare the end prices from different platforms. <br>
 
 When you first run the app, you will be brought to this page. <br>
-<img src="https://user-images.githubusercontent.com/49828224/114292780-b3c0f680-9ac3-11eb-98d7-c311991f83d5.png" width="400" height="200" />
+<img src="https://user-images.githubusercontent.com/49828224/114292780-b3c0f680-9ac3-11eb-98d7-c311991f83d5.png" width="640" height="340" />
 
 #### Add a new product
 1. Click on `ADD LIST`.<br>
-<img src="https://user-images.githubusercontent.com/49828224/114292811-dc48f080-9ac3-11eb-809d-44d6a73d388f.png" width="400" height="200" />
+<img src="https://user-images.githubusercontent.com/49828224/114292811-dc48f080-9ac3-11eb-809d-44d6a73d388f.png" width="640" height="340" />
 
 2. Type the name of the product, e.g. "Macbook" in this case, and click `Add`. <br>
-<img src="https://user-images.githubusercontent.com/49828224/114292831-07334480-9ac4-11eb-9654-26d96459e891.png" width="400" height="200" /> 
+<img src="https://user-images.githubusercontent.com/49828224/114292831-07334480-9ac4-11eb-9654-26d96459e891.png" width="640" height="340" /> 
 
 You will be brought back to the  `LISTS` page, where you will see the product listed there. <br>
-<img src="https://user-images.githubusercontent.com/49828224/114292878-4e213a00-9ac4-11eb-86a8-6f6693071661.png" width="400" height="200" />
+<img src="https://user-images.githubusercontent.com/49828224/114292878-4e213a00-9ac4-11eb-86a8-6f6693071661.png" width="640" height="340" />
 
 Upon clicking on the product, it will be expanded and an empty table with headers "Platform" and "End Price" is shown. <br>
-<img src="https://user-images.githubusercontent.com/49828224/114292894-701abc80-9ac4-11eb-9975-7b963d95efbd.png" width="400" height="200" />
+<img src="https://user-images.githubusercontent.com/49828224/114292894-701abc80-9ac4-11eb-9975-7b963d95efbd.png" width="640" height="340" />
 
 #### Upload screenshot
 1. Click on `Upload`. <br>
-<img src="https://user-images.githubusercontent.com/49828224/114292913-888ad700-9ac4-11eb-8f72-9323b2248000.png" width="400" height="200" />
+<img src="https://user-images.githubusercontent.com/49828224/114292913-888ad700-9ac4-11eb-8f72-9323b2248000.png" width="640" height="340" />
 
 2. Upload a screenshot and type the platform name into the form. <br>
-<img src="https://user-images.githubusercontent.com/49828224/114292979-0818a600-9ac5-11eb-9900-42c5ffe969e2.png" width="400" height="200" />
+<img src="https://user-images.githubusercontent.com/49828224/114292979-0818a600-9ac5-11eb-9900-42c5ffe969e2.png" width="640" height="340" />
 
 Upon clicking update, you will be brought back to the list page where you can click on the product to see the details included in the table. <br>
-<img src="https://user-images.githubusercontent.com/49828224/114292993-22528400-9ac5-11eb-885b-ade28033fa1f.png" width="400" height="200" />
+<img src="https://user-images.githubusercontent.com/49828224/114292993-22528400-9ac5-11eb-885b-ade28033fa1f.png" width="640" height="340" />
 
 3. To upload another screenshot, follow the same steps. <br>
-<img src="https://user-images.githubusercontent.com/49828224/114293004-3b5b3500-9ac5-11eb-8f94-d4cf634ecb34.png" width="400" height="200" />
+<img src="https://user-images.githubusercontent.com/49828224/114293004-3b5b3500-9ac5-11eb-8f94-d4cf634ecb34.png" width="640" height="340" />
 
 The table will list results from both screenshots. <br>
-<img src="https://user-images.githubusercontent.com/49828224/114293018-575ed680-9ac5-11eb-91f8-eec309ab76d8.png" width="400" height="200" />
+<img src="https://user-images.githubusercontent.com/49828224/114293018-575ed680-9ac5-11eb-91f8-eec309ab76d8.png" width="640" height="340" />
 
 #### Edit product name
 To edit the product name, e.g. from "Macbook" to "Macbook Pro" in this case, click on `Edit` and enter the updated product name before clicking on `Update`. <br>
-<img src="https://user-images.githubusercontent.com/49828224/114293044-73627800-9ac5-11eb-8dac-b0a119d9b3b2.png" width="400" height="200" />
+<img src="https://user-images.githubusercontent.com/49828224/114293044-73627800-9ac5-11eb-8dac-b0a119d9b3b2.png" width="640" height="340" />
 
 You will then be brought back to the `LISTS` page where the name of the product is updated. <br>
-<img src="https://user-images.githubusercontent.com/49828224/114293058-8b39fc00-9ac5-11eb-895c-79d0ccfb1552.png" width="400" height="200" />
+<img src="https://user-images.githubusercontent.com/49828224/114293058-8b39fc00-9ac5-11eb-895c-79d0ccfb1552.png" width="640" height="340" />
 
 #### Delete a product
 To delete a product, click on  `Delete` and the product will be deleted from the page. <br>
-<img src="https://user-images.githubusercontent.com/49828224/114293072-aa388e00-9ac5-11eb-9f25-056ea68539be.png" width="400" height="200" />
+<img src="https://user-images.githubusercontent.com/49828224/114293072-aa388e00-9ac5-11eb-9f25-056ea68539be.png" width="640" height="340" />
 
 
 </br>
