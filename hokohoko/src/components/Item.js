@@ -12,9 +12,14 @@ import '../styles.css';
 class Item extends Component {
   constructor(props) {
     super(props);
+    this.onDelete = this.onDelete.bind(this);
     this.state = {
       id: 0
     }
+  }
+
+  onDelete() {
+    this.props.onDelete(this.props.item);
   }
 
   render() {
@@ -23,6 +28,7 @@ class Item extends Component {
         <Card>
           <Accordion.Toggle as={Card.Header} eventKey={this.props.item.id.toString()} onClick={this.props.onSelect} id={this.props.item.id}>
             {this.props.item.name}
+            <Link className="float-right" variant="outline-danger" onClick={this.onDelete}>Delete</Link>
           </Accordion.Toggle>
           <Accordion.Collapse eventKey={this.props.item.id.toString()}>
             <Card.Body>

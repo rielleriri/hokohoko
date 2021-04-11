@@ -22,7 +22,17 @@ class App extends Component {
         this.handleAdd = this.handleAdd.bind(this);
         this.handleUpload = this.handleUpload.bind(this);
         this.handleSelect = this.handleSelect.bind(this);
+        this.handleDelete = this.handleDelete.bind(this);
     }
+
+    handleDelete(itemToBeDeleted) {
+        const newItems = this.state.items.filter(item => {
+          return item.id !== itemToBeDeleted.id;
+        });
+        this.setState({
+          items: newItems
+        });
+      }
 
     handleAdd(e) {
         e.preventDefault();
