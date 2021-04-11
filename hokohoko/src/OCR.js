@@ -5,7 +5,7 @@ import FilePondPluginImagePreview from 'filepond-plugin-image-preview';
 import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css';
 import 'filepond/dist/filepond.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Card, Container, Form, Row, Col } from "react-bootstrap";
+import { Button, Container, Form, Row, Col } from "react-bootstrap";
 
 import { Link } from 'react-router-dom';
 
@@ -96,7 +96,7 @@ class OCR extends Component {
             <Container fluid>
                 <Row>
                     <Col>
-                        <h3>Add a new comparison:</h3>
+                        <h3>Add A New Comparison:</h3>
                     </Col>
                     <Col>
                         <Link className='float-right form-child-small back-link' to='/'>
