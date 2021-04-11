@@ -53,7 +53,7 @@ Upon clicking update, you will be brought back to the list page where you can cl
 3. To upload another screenshot, follow the same steps. <br>
 <img src="https://user-images.githubusercontent.com/49828224/114293004-3b5b3500-9ac5-11eb-8f94-d4cf634ecb34.png" width="400" height="200" />
 
-List with results from both screenshots. <br>
+The table will list results from both screenshots. <br>
 <img src="https://user-images.githubusercontent.com/49828224/114293018-575ed680-9ac5-11eb-91f8-eec309ab76d8.png" width="400" height="200" />
 
 #### Edit product name
@@ -114,4 +114,5 @@ ifconfig
 #### Samples of unacceptable screenshots:
 <img src="https://user-images.githubusercontent.com/61452236/113740174-0e102f00-9733-11eb-8641-b7bc4d692786.jpg" width="300" height="550" />   <img src="https://user-images.githubusercontent.com/61452236/113740317-2c762a80-9733-11eb-8ee2-2a32a79ea1ca.jpg" width="300" height="550" />  <img src="https://user-images.githubusercontent.com/61452236/113740295-28e2a380-9733-11eb-9194-ec231112824b.png" width="100" height="200" />
 
+<br>
 The OCR technology in HokoHoko works well on acceptable screenshots (both mobile and web) taken from most e-commerce platforms (such as Lazada, Shopee, Amazon, Qoo10, Grab, foodpanda, ShopBack, Booking.com, FairPrice Online).
