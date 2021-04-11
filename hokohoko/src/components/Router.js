@@ -1,11 +1,13 @@
 // React
 import { React, Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
+
 // Others
 
 // Components
 import Lists from '../Lists';
 import AddItem from './AddItem';
+import EditItem from './EditItem';
 
 import OCR from '../OCR';
 // CSS
@@ -29,7 +31,7 @@ class Router extends Component {
               <Route path='/add' render={(props) => {
                 return <AddItem onAdd={this.props.onAdd} {...props} />
               }} />
-              {/* <Route path='/edit_item/:id' component={EditItem} /> */}
+              <Route path='/edit_item/:id' component={EditItem} />
               <Route path='/new' render={(props) => {
                 return <OCR onUpload={this.props.onUpload} {...props} />
               }} />

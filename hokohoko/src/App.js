@@ -23,6 +23,7 @@ class App extends Component {
         this.handleUpload = this.handleUpload.bind(this);
         this.handleSelect = this.handleSelect.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
+        this.handleEdit = this.handleEdit.bind(this);
     }
 
     handleDelete(itemToBeDeleted) {
@@ -78,6 +79,20 @@ class App extends Component {
         this.setState({
             selectedId: newSelected
           });
+    }
+
+    handleEdit(itemToBeEdited) {
+      let newItems = this.state.items;
+      newItems = newItems.map(item => {
+        if (item.id === itemToBeEdited.id) {
+          item.name = itemToBeEdited.name;
+        }
+        return item;
+      });
+  
+      this.setState({
+        items: newItems
+      });
     }
 
     render() {
