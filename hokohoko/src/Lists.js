@@ -17,7 +17,7 @@ class Lists extends Component {
                     key={item.id}
                     item={item}
                     price={item.price}
-                    platform={item.platform}
+                    platforms={item.platforms.sort((a, b) => (a.end_price > b.end_price) ? 1 : -1)}
                     onUpload={this.props.onUpload}
                     onDelete={this.props.onDelete}
                     onEdit={this.props.onEdit}
