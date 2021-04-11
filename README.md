@@ -48,7 +48,7 @@ Upon clicking on the product, it will be expanded and an empty table with header
 2. Upload a screenshot and type the platform name into the form. <br>
 <img src="https://user-images.githubusercontent.com/49828224/114309680-94a18380-9b1a-11eb-9f4e-682397e318d7.png" width="640" height="340" />
 
-  Upon clicking `Confirm`, you will be brought back to the list page where you can click on the product to see the details included in the table. <br>
+  Upon clicking `Confirm`, you will be brought back to the `Lists` page where you can click on the product to see the details included in the table. <br>
 <img src="https://user-images.githubusercontent.com/49828224/114309708-b26ee880-9b1a-11eb-88be-92eb0d4d7da3.png" width="640" height="340" />
 
 3. To upload another screenshot, follow the same steps. <br>
