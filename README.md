@@ -20,13 +20,52 @@ npm start
 </br>
 
 ### Manoeuvring the Application: Web Edition :computer:
-##### In the header, you should see two tabs: `Lists` and `New Comparison` which you can click
-##### In `Lists`, it shows all the products that are being compared and their end prices at the side
-##### In `New Comparison`, it allows you to upload a screenshot of the checkout page of the product you want to compare. The OCR will process the image to identify the end price and return it to the user. Then click on the `Continue` button and the application will prompt you to enter the platform the product was from, e.g. Shopee, Lazada.
+##### In the header, you should see two tabs: `LISTS` and `ADD LIST` which you can click
+##### In `LISTS`, it shows all the products that are being compared. By clicking on each item, you can see the platforms and corresponding end price obtained from various screenshots that you have uploaded.
+##### In `ADD LIST`, you can add a new product for which you want to compare the end prices from different platforms. <br>
 
-<img src="https://user-images.githubusercontent.com/61452236/113733499-1b2a1f80-972d-11eb-87d2-2fa9c07b1fb7.png" width="400" height="200" /> 
+When you first run the app, you will be brought to this page. <br>
+<img src="https://user-images.githubusercontent.com/49828224/114292780-b3c0f680-9ac3-11eb-98d7-c311991f83d5.png" width="400" height="200" />
 
-<img src="https://user-images.githubusercontent.com/61452236/113734301-cd61e700-972d-11eb-9d6b-94e912cc298c.png" width="400" height="200" /> <img src="https://user-images.githubusercontent.com/61452236/113734363-dd79c680-972d-11eb-9e6c-d74a27e051be.png" width="400" height="200" />
+##### Add a new product
+1. Click on `ADD LIST`.<br>
+<img src="https://user-images.githubusercontent.com/49828224/114292811-dc48f080-9ac3-11eb-809d-44d6a73d388f.png" width="400" height="200" />
+
+2. Type the name of the product, e.g. "Macbook" in this case, and click `Add`. <br>
+<img src="https://user-images.githubusercontent.com/49828224/114292831-07334480-9ac4-11eb-9654-26d96459e891.png" width="400" height="200" /> 
+
+You will be brought back to the  `LISTS` page, where you will see the product listed there. <br>
+<img src="https://user-images.githubusercontent.com/49828224/114292878-4e213a00-9ac4-11eb-86a8-6f6693071661.png" width="400" height="200" />
+
+Upon clicking on the product, it will be expanded and an empty table with headers "Platform" and "End Price" is shown. <br>
+<img src="https://user-images.githubusercontent.com/49828224/114292894-701abc80-9ac4-11eb-9975-7b963d95efbd.png" width="400" height="200" />
+
+##### Upload screenshot
+1. Click on `Upload`. <br>
+<img src="https://user-images.githubusercontent.com/49828224/114292913-888ad700-9ac4-11eb-8f72-9323b2248000.png" width="400" height="200" />
+
+2. Upload a screenshot and type the platform name into the form. <br>
+<img src="https://user-images.githubusercontent.com/49828224/114292979-0818a600-9ac5-11eb-9900-42c5ffe969e2.png" width="400" height="200" />
+
+Upon clicking update, you will be brought back to the list page where you can click on the product to see the details included in the table. <br>
+<img src="https://user-images.githubusercontent.com/49828224/114292993-22528400-9ac5-11eb-885b-ade28033fa1f.png" width="400" height="200" />
+
+3. To upload another screenshot, follow the same steps. <br>
+<img src="https://user-images.githubusercontent.com/49828224/114293004-3b5b3500-9ac5-11eb-8f94-d4cf634ecb34.png" width="400" height="200" />
+
+List with results from both screenshots. <br>
+<img src="https://user-images.githubusercontent.com/49828224/114293018-575ed680-9ac5-11eb-91f8-eec309ab76d8.png" width="400" height="200" />
+
+##### Edit product name
+To edit the product name, e.g. from "Macbook" to "Macbook Pro" in this case, click on `Edit` and enter the updated product name before clicking on `Update`. <br>
+<img src="https://user-images.githubusercontent.com/49828224/114293044-73627800-9ac5-11eb-8dac-b0a119d9b3b2.png" width="400" height="200" />
+
+You will then be brought back to the `LISTS` page where the name of the product is updated. <br>
+<img src="https://user-images.githubusercontent.com/49828224/114293058-8b39fc00-9ac5-11eb-895c-79d0ccfb1552.png" width="400" height="200" />
+
+##### Delete a product
+To delete a product, click on  `Delete` and the product will be deleted from the page. <br>
+<img src="https://user-images.githubusercontent.com/49828224/114293072-aa388e00-9ac5-11eb-9f25-056ea68539be.png" width="400" height="200" />
 
 
 </br>
@@ -75,3 +114,4 @@ Ifconfig
 #### Samples of unacceptable screenshots:
 <img src="https://user-images.githubusercontent.com/61452236/113740174-0e102f00-9733-11eb-8641-b7bc4d692786.jpg" width="300" height="550" />   <img src="https://user-images.githubusercontent.com/61452236/113740317-2c762a80-9733-11eb-8ee2-2a32a79ea1ca.jpg" width="300" height="550" />  <img src="https://user-images.githubusercontent.com/61452236/113740295-28e2a380-9733-11eb-9194-ec231112824b.png" width="100" height="200" />
 
+The OCR technology in HokoHoko works well on acceptable screenshots (both mobile and web) taken from most e-commerce platforms (such as Lazada, Shopee, Amazon, Qoo10, Grab, foodpanda, ShopBack, Booking.com, FairPrice Online).
