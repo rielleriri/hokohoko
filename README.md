@@ -54,7 +54,7 @@ Upon clicking on the product, it will be expanded and an empty table with header
 3. To upload another screenshot, follow the same steps. <br>
 <img src="https://user-images.githubusercontent.com/49828224/114309751-d8948880-9b1a-11eb-8deb-4e85bd3052bc.png" width="640" height="340" />
 
-The table will rank and list results from both screenshots. The top entry is the platform with the lowest end price for the product. <br>
+The results will be ranked and listed in the table in order of increasing end price. The top entry is the platform with the lowest end price for the product. <br>
 <img src="https://user-images.githubusercontent.com/49828224/114309760-e2b68700-9b1a-11eb-8437-e4148c4c4aad.png" width="640" height="340" />
 
 #### Edit product name
