@@ -75,9 +75,9 @@ class Item extends Component {
                       <td>{platform.name}</td>
                       <td>{platform.end_price}</td>
                       <td>
-                        <div className="text-center">
+                        {/* <div className="text-center">
                           <Button className="float-end" variant="danger">Delete</Button>
-                        </div>
+                        </div> */}
                       </td>
                     </tr>;
                   })}

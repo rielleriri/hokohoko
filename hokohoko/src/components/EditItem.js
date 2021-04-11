@@ -39,7 +39,7 @@ class EditItem extends Component {
 
                 <Form className='form-child-big' onSubmit={this.onEdit}>
                     <Row>
-                        <Col xs={4}>
+                        <Col lg ={4} md={8} xs={8}>
                             <Form.Group>
                                 <Form.Control
                                     maxLength='25'
