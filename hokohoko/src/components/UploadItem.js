@@ -7,7 +7,6 @@ import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css
 import 'filepond/dist/filepond.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import{ Button } from 'react-bootstrap';
-import Comparison from './Comparison';
 
 class UploadItem extends Component {
   constructor(props) {
@@ -119,9 +118,7 @@ render() {
             <div className="App">
                 <div className="container">
                     <div style={{ marginTop: "10%" }} className="row">
-                        <div className="col-md-4">
-
-                        </div>
+                        <div className="col-md-4"></div>
                         <div className="col-md-4">
                             <FilePond ref={ref => this.pond = ref}
                                 onaddfile={(err, file) => {
@@ -145,9 +142,7 @@ render() {
                                 <div className="col-md-12">
                                     <i className={"fas fa-sync fa-2x " + (this.state.isProcessing ? "fa-spin" : "")}></i> <span className="status-text">{this.state.isProcessing ? `Processing Image ( ${this.state.pctg} % )` : "Parsed Text"} </span>
                                 </div>
-
                             </div>
-
                         </h5>
                         <div class="card-body">
                             <p class="card-text">{(this.state.isProcessing) ?

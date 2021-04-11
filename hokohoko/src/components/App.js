@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import addNewComparison from './addNewComparison';
 import Header from './Header';
 import Main from './Main';
 

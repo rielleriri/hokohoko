@@ -4,8 +4,6 @@ import Home from './Home';
 import AddItem from './AddItem';
 import EditItem from './EditItem';
 import UploadItem from './UploadItem';
-import addNewComparison from './addNewComparison';
-
 class Main extends Component {
   render() {
     return (
@@ -24,7 +22,6 @@ class Main extends Component {
           }} />
           <Route path='/edit_item/:id' component={EditItem} />
           <Route path='/upload_item/:id' component={UploadItem} />
-          <Route path='/new' component={addNewComparison} />
         </Switch>
       </main>
     );
