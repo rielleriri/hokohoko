@@ -1,5 +1,6 @@
 // React
 import { React, Component } from 'react';
+import { Link } from 'react-router-dom';
 // Others
 import { Nav, Navbar } from 'react-bootstrap';
 // Components
@@ -12,20 +13,24 @@ class Header extends Component {
         return (
             <div>
                 <Navbar bg="light" expand="lg">
-                    <Navbar.Brand href="/">
-                        <img
-                            alt=""
-                            src="../../images/icon.png"
-                            width="30"
-                            height="30"
-                            className="d-inline-block align-top"
-                        />{' '}
+                    <Link className='form-child-small back-link' to='/'>
+                        <Navbar.Brand href="/">
+                            <img
+                                alt=""
+                                src="../../images/icon.png"
+                                width="30"
+                                height="30"
+                                className="d-inline-block align-top"
+                            />{' '}
                     Hokohoko
                     </Navbar.Brand>
+                    </Link>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
-                            <Nav.Link href="/">Lists</Nav.Link>
+                            <Link className='form-child-small back-link' to='/'>
+                                <Nav.Link href="/">Lists</Nav.Link>
+                            </Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>

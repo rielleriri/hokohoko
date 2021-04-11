@@ -28,32 +28,32 @@ class EditItem extends Component {
                         <h3>Edit Product Name</h3>
                     </Col>
                     <Col>
-                    <Link className='form-child-small back-link' to='/'>
-                        <Button className="float-right" variant="primary">
-                        Back
+                        <Link className='form-child-small back-link' to='/'>
+                            <Button className="float-right" variant="primary">
+                                Back
                         </Button>
                         </Link>
                     </Col>
                 </Row>
                 <hr />
-                
+
                 <Form className='form-child-big' onSubmit={this.onEdit}>
-                <Row>
-                    <Col xs={4}>
-                    <Form.Group>
-                        <Form.Control
-                            maxLength='25'
-                            placeholder='Type name here'
-                            defaultValue={this.props.location.name}
-                        />
-                    </Form.Group>
-                    </Col>
-                    <Col>
-                    <Form.Group>
-                        <Button type="submit" variant="success">Update</Button>
-                    </Form.Group>
-                    </Col>
-                </Row>
+                    <Row>
+                        <Col xs={4}>
+                            <Form.Group>
+                                <Form.Control
+                                    maxLength='25'
+                                    placeholder='Type name here'
+                                    defaultValue={this.props.location.name}
+                                />
+                            </Form.Group>
+                        </Col>
+                        <Col>
+                            <Form.Group>
+                                <Button type="submit" variant="success">Update</Button>
+                            </Form.Group>
+                        </Col>
+                    </Row>
                 </Form>
 
             </Container>
