@@ -87,9 +87,11 @@ ifconfig
 > For example, if your IP address is `10.124.139.25`
 > Enter `10.124.139.25:3000` into your mobile browser
 
-###### *Note: Make sure the hokohoko app is still running on VS Code!*
-##### On the mobile browser, you should see the menu button on the top-right hand corner which you can click to reveal the `Lists` and `New Comparisons` tabs
-<img src="https://user-images.githubusercontent.com/61452236/113671871-8520d580-96e9-11eb-871a-3726420bdf7c.jpg" width="300" height="500" />   <img src="https://user-images.githubusercontent.com/61452236/113672255-0ed0a300-96ea-11eb-817b-ae375868e667.jpg" width="300" height="500" />
+###### *Note: Make sure the hokohoko app is still running on VS Code!* <br>
+
+The app works in the same way as in the Web version, so the same steps can be followed.
+
+
 
 
 </br>
