@@ -16,13 +16,15 @@ class App extends Component {
         this.state = {
             items: [],
             nextId: 0,
-            selectedId: 0
+            selectedId: 0,
+            platformId: 0
         };
 
         this.handleAdd = this.handleAdd.bind(this);
         this.handleUpload = this.handleUpload.bind(this);
         this.handleSelect = this.handleSelect.bind(this);
         this.handleDelete = this.handleDelete.bind(this);
+        this.handlePlatformDelete = this.handlePlatformDelete.bind(this);
     }
 
     handleDelete(itemToBeDeleted) {
@@ -31,6 +33,17 @@ class App extends Component {
         });
         this.setState({
           items: newItems
+        });
+      }
+
+    handlePlatformDelete(itemToBeDeleted) {
+        const newItems = this.state.items.filter((item )=> {
+            return item.platforms.filter((platform) => {
+                return platform.id !== itemToBeDeleted.id;
+            })
+          });
+        this.setState({
+          items:newItems
         });
       }
 
@@ -53,21 +66,22 @@ class App extends Component {
         const inputs = e.target.getElementsByTagName('input');
         let newItems = this.state.items;
 
-        console.log(inputs.platform.value)
-        console.log(inputs.endPrice.value)
+        //console.log(inputs.platform.value)
+        // console.log(inputs.endPrice.value)
 
         if (e.target[0].value.length !== 0) {
           newItems = newItems.map(item => {
         // ID of selected item here
             if (item.id.toString() === this.state.selectedId.toString()) {
-              item.platforms.push({ name: inputs.platform.value, end_price: inputs.endPrice.value })
+              item.platforms.push({ name: inputs.platform.value, end_price: inputs.endPrice.value, id: this.state.platformId })
             }
             return item;
           });
         }
     
         this.setState({
-          items: newItems
+          items: newItems,
+          platformId: this.state.platformId + 1
         });
     }
 
@@ -88,6 +102,7 @@ class App extends Component {
                     items={this.state.items}
                     onAdd={this.handleAdd}
                     onDelete={this.handleDelete}
+                    onPlatformDelete={this.handlePlatformDelete}
                     onUpload={this.handleUpload}
                     onEdit={this.handleEdit}
                     onSelect={this.handleSelect}

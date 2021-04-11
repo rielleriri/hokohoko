@@ -13,6 +13,7 @@ class Item extends Component {
   constructor(props) {
     super(props);
     this.onDelete = this.onDelete.bind(this);
+    this.onPlatformDelete = this.onPlatformDelete.bind(this);
     this.state = {
       id: 0
     }
@@ -20,6 +21,10 @@ class Item extends Component {
 
   onDelete() {
     this.props.onDelete(this.props.item);
+  }
+
+  onPlatformDelete() {
+    this.props.onPlatformDelete(this.props.item.platform);
   }
 
   render() {
@@ -51,14 +56,14 @@ class Item extends Component {
                     </th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody >
                   {this.props.item.platforms.map(platform => {
                     return <tr>
                       <td>{platform.name}</td>
                       <td>{platform.end_price}</td>
-                      <td>
+                      <td >
                         <div className="text-center">
-                          <Button className="float-end" variant="danger">Delete</Button>
+                          <Link className="float-end" variant="danger" onClick={this.onPlatformDelete(platform.id)}>Delete</Link>
                         </div>
                       </td>
                     </tr>;

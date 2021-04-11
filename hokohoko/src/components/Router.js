@@ -24,6 +24,7 @@ class Router extends Component {
                   onEdit={this.props.onEdit}
                   onUpload={this.props.onUpload}
                   onSelect={this.props.onSelect}
+                  onPlatformDelete={this.props.onPlatformDelete}
                   {...props} />;
               }} />
               <Route path='/add' render={(props) => {

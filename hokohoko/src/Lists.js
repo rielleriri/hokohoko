@@ -20,6 +20,7 @@ class Lists extends Component {
                     platform={item.platform}
                     onUpload={this.props.onUpload}
                     onDelete={this.props.onDelete}
+                    onPlatformDelete={this.props.onPlatformDelete}
                     onEdit={this.props.onEdit}
                     onSelect={this.props.onSelect}
                 />
