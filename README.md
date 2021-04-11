@@ -17,7 +17,7 @@ npm start
 ```
 ##### The application should start automatically on your default web browser.
 
-If your default browser is Google Chrome, you can run HokoHoko as a Chrome extension as well by doing the following. <br>
+If your default browser is Google Chrome, you can run Hokohoko as a Chrome extension as well by doing the following. <br>
 <img src="https://user-images.githubusercontent.com/49828224/114309442-b3534a80-9b19-11eb-82f1-13f70a8315a2.png" width="640" height="340"> 
 
 </br>
