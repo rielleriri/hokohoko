@@ -15,11 +15,13 @@ class App extends Component {
 
         this.state = {
             items: [],
-            nextId: 0
+            nextId: 0,
+            selectedId: 0
         };
 
         this.handleAdd = this.handleAdd.bind(this);
         this.handleUpload = this.handleUpload.bind(this);
+        this.handleSelect = this.handleSelect.bind(this);
     }
 
     handleAdd(e) {
@@ -46,8 +48,8 @@ class App extends Component {
 
         if (e.target[0].value.length !== 0) {
           newItems = newItems.map(item => {
-        // ID of selected item here (replace 0)
-            if (item.id === 0) {
+        // ID of selected item here
+            if (item.id.toString() === this.state.selectedId.toString()) {
               item.platforms.push({ name: inputs.platform.value, end_price: inputs.endPrice.value })
             }
             return item;
@@ -57,9 +59,15 @@ class App extends Component {
         this.setState({
           items: newItems
         });
+    }
 
-        console.log(this.state.items)
+    handleSelect(e) {
+        e.preventDefault();
+        let newSelected = e.target.id;
 
+        this.setState({
+            selectedId: newSelected
+          });
     }
 
     render() {
@@ -72,6 +80,7 @@ class App extends Component {
                     onDelete={this.handleDelete}
                     onUpload={this.handleUpload}
                     onEdit={this.handleEdit}
+                    onSelect={this.handleSelect}
                 />
             </div>
         );

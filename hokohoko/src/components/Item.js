@@ -10,18 +10,18 @@ import { Accordion, Button, Card, Table } from 'react-bootstrap';
 import '../styles.css';
 
 class Item extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            id: 0
-        }
+  constructor(props) {
+    super(props);
+    this.state = {
+      id: 0
     }
+  }
 
-    render() {
-        return (
-            <div>
+  render() {
+    return (
+      <div>
         <Card>
-          <Accordion.Toggle as={Card.Header} eventKey={this.props.item.id.toString()}>
+          <Accordion.Toggle as={Card.Header} eventKey={this.props.item.id.toString()} onClick={this.props.onSelect} id={this.props.item.id}>
             {this.props.item.name}
           </Accordion.Toggle>
           <Accordion.Collapse eventKey={this.props.item.id.toString()}>
@@ -36,12 +36,12 @@ class Item extends Component {
                       End Price
                     </th>
                     <th width="10%">
-                        <div  className="text-center">
+                      <div className="text-center">
                         <Link to='/new'>
-                          <Button className="float-end">Upload</Button>
+                          <Button className="float-end" >Upload</Button>
                         </Link>
-                        
-                        </div>
+
+                      </div>
                     </th>
                   </tr>
                 </thead>
@@ -50,7 +50,11 @@ class Item extends Component {
                     return <tr>
                       <td>{platform.name}</td>
                       <td>{platform.end_price}</td>
-                      <td><Button className="float-end" variant="danger">Delete</Button></td>
+                      <td>
+                        <div className="text-center">
+                          <Button className="float-end" variant="danger">Delete</Button>
+                        </div>
+                      </td>
                     </tr>;
                   })}
 
@@ -61,8 +65,8 @@ class Item extends Component {
           </Accordion.Collapse>
         </Card>
       </div>
-        );
-      }
+    );
+  }
 }
 
 export default Item;

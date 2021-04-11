@@ -21,6 +21,7 @@ class Lists extends Component {
                     onUpload={this.props.onUpload}
                     onDelete={this.props.onDelete}
                     onEdit={this.props.onEdit}
+                    onSelect={this.props.onSelect}
                 />
             );
         });
