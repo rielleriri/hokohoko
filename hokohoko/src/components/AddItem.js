@@ -33,7 +33,7 @@ class AddItem extends Component {
     return (
       <div>
         <Button className="float-right" variant="primary" onClick={this.openModal}>
-          Add
+          +
         </Button>
 
         <Modal show={this.state.isOpen} onHide={this.closeModal}>

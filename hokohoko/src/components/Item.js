@@ -39,7 +39,7 @@ class Item extends Component {
         <Card>
           <Accordion.Toggle as={Card.Header} eventKey={this.props.item.id.toString()} onClick={this.props.onSelect} id={this.props.item.id}>
             <b className="align-middle">{this.props.item.name}</b>
-            <Button className="float-right" variant="outline-danger" onClick={this.onDelete}>Delete</Button>
+            <Button className="float-right" variant="outline-danger" onClick={this.onDelete}>X</Button>
             <Link className="float-right" to={{
                     pathname: `/edit_item/${this.props.item.id}`,
                     name: this.props.item.name,
