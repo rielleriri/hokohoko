@@ -27,8 +27,8 @@ class Item extends Component {
       <div>
         <Card>
           <Accordion.Toggle as={Card.Header} eventKey={this.props.item.id.toString()} onClick={this.props.onSelect} id={this.props.item.id}>
-            {this.props.item.name}
-            <Link className="float-right" variant="outline-danger" onClick={this.onDelete}>Delete</Link>
+            <b className="align-middle">{this.props.item.name}</b>
+            <Button className="float-right" variant="outline-danger" onClick={this.onDelete}>Delete</Button>
           </Accordion.Toggle>
           <Accordion.Collapse eventKey={this.props.item.id.toString()}>
             <Card.Body>
@@ -44,7 +44,7 @@ class Item extends Component {
                     <th width="10%">
                       <div className="text-center">
                         <Link to='/new'>
-                          <Button className="float-end" >Upload</Button>
+                          <Button className="float-end" variant="outline-primary">Upload</Button>
                         </Link>
 
                       </div>

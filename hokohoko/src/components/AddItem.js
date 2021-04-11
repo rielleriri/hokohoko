@@ -32,7 +32,7 @@ class AddItem extends Component {
   render() {
     return (
       <div>
-        <Button variant="primary" onClick={this.openModal}>
+        <Button className="float-right" variant="primary" onClick={this.openModal}>
           Add
         </Button>
 

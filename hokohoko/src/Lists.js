@@ -1,7 +1,7 @@
 // React
 import { React, Component } from 'react';
 // Others
-import { Accordion, Container } from 'react-bootstrap';
+import { Accordion, Container, Row, Col } from 'react-bootstrap';
 // Components
 import AddItem from './components/AddItem';
 import Item from './components/Item';
@@ -29,8 +29,15 @@ class Lists extends Component {
 
         return (
             <Container fluid>
-                <h3>Your Product Lists</h3>
-                <AddItem onAdd={this.props.onAdd}/>
+                <Row>
+                    <Col>
+                        <h3>Your Product Lists</h3>
+                    </Col>
+                    <Col>
+                        <AddItem onAdd={this.props.onAdd}/>
+                    </Col>
+                </Row>
+                
                 {/* Page break */}
                 <hr />
                 <Accordion defaultActiveKey="">
