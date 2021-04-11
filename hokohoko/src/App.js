@@ -1,48 +1,115 @@
-import React, { Component } from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
-import './App.css';
+// React
+import { React, Component } from 'react';
+// Others
 
-const NavBar = () => (
-  <div className="navbar">
-    <h3>HokoHoko</h3>
-    <Link to="/">Lists</Link>
-    <Link to="/new">New Comparison</Link>
-  </div>
-);
-
-const Template = (props) => (
-  <div>
-    <NavBar />
-    <p className="page-info">
-      {props.title}:
-    </p>
-    <ul className={props.status}>
-        <li>Task 1</li>
-        <li>Task 2</li>
-        <li>Task 3</li>
-    </ul>
-  </div>
-);
-
-const ComparisonList = () => (
-  <Template title="Lists" status="Lists"/>
-);
-
-const AddNewComparison = () => (
-  <Template title="Add Comparison" status="Add"/>
-);
+// Components
+import Header from './components/Header';
+import Router from './components/Router';
+// CSS
+import './styles.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends Component {
-  render() {
-    return (
-      <BrowserRouter>
-        <div>
-          <Route exact path="/" component={ComparisonList}/>
-          <Route path="/new" component={AddNewComparison}/>
-        </div>
-      </BrowserRouter>
-    );
-  }
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            items: [],
+            nextId: 0,
+            selectedId: 0
+        };
+
+        this.handleAdd = this.handleAdd.bind(this);
+        this.handleUpload = this.handleUpload.bind(this);
+        this.handleSelect = this.handleSelect.bind(this);
+        this.handleDelete = this.handleDelete.bind(this);
+        this.handleEdit = this.handleEdit.bind(this);
+    }
+
+    handleDelete(itemToBeDeleted) {
+        const newItems = this.state.items.filter(item => {
+          return item.id !== itemToBeDeleted.id;
+        });
+        this.setState({
+          items: newItems
+        });
+      }
+
+    handleAdd(e) {
+        e.preventDefault();
+        const inputs = e.target.getElementsByTagName('input');
+        let newItems = this.state.items;
+
+        if (e.target[0].value.length !== 0) {
+            newItems.push({ name: inputs.itemName.value, id: this.state.nextId, platforms: [] });
+            this.setState({
+                items: newItems,
+                nextId: this.state.nextId + 1
+            });
+        }
+    }
+
+    handleUpload(e) {
+        e.preventDefault();
+        const inputs = e.target.getElementsByTagName('input');
+        let newItems = this.state.items;
+
+        console.log(inputs.platform.value)
+        console.log(inputs.endPrice.value)
+
+        if (e.target[0].value.length !== 0) {
+          newItems = newItems.map(item => {
+        // ID of selected item here
+            if (item.id.toString() === this.state.selectedId.toString()) {
+              item.platforms.push({ name: inputs.platform.value, end_price: inputs.endPrice.value })
+            }
+            return item;
+          });
+        }
+    
+        this.setState({
+          items: newItems
+        });
+    }
+
+    handleSelect(e) {
+        e.preventDefault();
+        let newSelected = e.target.id;
+
+        this.setState({
+            selectedId: newSelected
+          });
+    }
+
+    handleEdit(itemToBeEdited) {
+      let newItems = this.state.items;
+      newItems = newItems.map(item => {
+        if (item.id === itemToBeEdited.id) {
+          item.name = itemToBeEdited.name;
+        }
+        return item;
+      });
+  
+      this.setState({
+        items: newItems
+      });
+    }
+
+    render() {
+        return (
+            <div>
+                <Header />
+                <Router
+                    items={this.state.items}
+                    onAdd={this.handleAdd}
+                    onDelete={this.handleDelete}
+                    onUpload={this.handleUpload}
+                    onEdit={this.handleEdit}
+                    onSelect={this.handleSelect}
+                />
+            </div>
+        );
+    }
 }
 
 export default App;
