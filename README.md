@@ -26,14 +26,14 @@ If your default browser is Google Chrome, you can run HokoHoko as a Chrome exten
 ##### In `Lists`, it shows all the products that are being compared. By clicking on each item, you can see the platforms and corresponding end price obtained from various screenshots that you have uploaded.
 
 When you first run the app, you will be brought to this page.<br>
-<img src="https://user-images.githubusercontent.com/49828224/114309488-d7169080-9b19-11eb-8de0-0c30c0d7be6b.png" width="640" height="340" />
+<img src="https://user-images.githubusercontent.com/49828224/114310133-6329b780-9b1c-11eb-9824-cf82f25b2e27.png" width="640" height="340" />
 
 #### Add a new product
 1. Click on `+`.<br>
-<img src="https://user-images.githubusercontent.com/49828224/114309522-0200e480-9b1a-11eb-9fa6-644175633861.png" width="640" height="340" />
+<img src="https://user-images.githubusercontent.com/49828224/114310173-7f2d5900-9b1c-11eb-8f72-ead0e27baa9c.png" width="640" height="340" />
 
 2. Type the name of the product, e.g. "Macbook" in this case, and click `Confirm`. <br>
-<img src="https://user-images.githubusercontent.com/49828224/114309557-252b9400-9b1a-11eb-9d9c-52b67db0b48a.png" width="640" height="340" /> 
+<img src="https://user-images.githubusercontent.com/49828224/114310203-99ffcd80-9b1c-11eb-8b8f-854bce14a36f.png" width="640" height="340" /> 
 
 You will be brought back to the `Lists` page, where you will see the product listed there. <br>
 <img src="https://user-images.githubusercontent.com/49828224/114309592-40969f00-9b1a-11eb-8a36-eaddbbd62330.png" width="640" height="340" />
