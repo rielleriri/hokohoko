@@ -27,7 +27,7 @@ npm start
 When you first run the app, you will be brought to this page. <br>
 <img src="https://user-images.githubusercontent.com/49828224/114292780-b3c0f680-9ac3-11eb-98d7-c311991f83d5.png" width="400" height="200" />
 
-##### Add a new product
+#### Add a new product
 1. Click on `ADD LIST`.<br>
 <img src="https://user-images.githubusercontent.com/49828224/114292811-dc48f080-9ac3-11eb-809d-44d6a73d388f.png" width="400" height="200" />
 
@@ -40,7 +40,7 @@ You will be brought back to the  `LISTS` page, where you will see the product li
 Upon clicking on the product, it will be expanded and an empty table with headers "Platform" and "End Price" is shown. <br>
 <img src="https://user-images.githubusercontent.com/49828224/114292894-701abc80-9ac4-11eb-9975-7b963d95efbd.png" width="400" height="200" />
 
-##### Upload screenshot
+#### Upload screenshot
 1. Click on `Upload`. <br>
 <img src="https://user-images.githubusercontent.com/49828224/114292913-888ad700-9ac4-11eb-8f72-9323b2248000.png" width="400" height="200" />
 
@@ -56,14 +56,14 @@ Upon clicking update, you will be brought back to the list page where you can cl
 List with results from both screenshots. <br>
 <img src="https://user-images.githubusercontent.com/49828224/114293018-575ed680-9ac5-11eb-91f8-eec309ab76d8.png" width="400" height="200" />
 
-##### Edit product name
+#### Edit product name
 To edit the product name, e.g. from "Macbook" to "Macbook Pro" in this case, click on `Edit` and enter the updated product name before clicking on `Update`. <br>
 <img src="https://user-images.githubusercontent.com/49828224/114293044-73627800-9ac5-11eb-8dac-b0a119d9b3b2.png" width="400" height="200" />
 
 You will then be brought back to the `LISTS` page where the name of the product is updated. <br>
 <img src="https://user-images.githubusercontent.com/49828224/114293058-8b39fc00-9ac5-11eb-895c-79d0ccfb1552.png" width="400" height="200" />
 
-##### Delete a product
+#### Delete a product
 To delete a product, click on  `Delete` and the product will be deleted from the page. <br>
 <img src="https://user-images.githubusercontent.com/49828224/114293072-aa388e00-9ac5-11eb-9f25-056ea68539be.png" width="400" height="200" />
 
@@ -78,7 +78,7 @@ ipconfig
 ```
 ###### For Mac or Linux:
 ```
-Ifconfig
+ifconfig
 ```
 ##### Open your mobile browser and enter your ip address, followed by `:3000`
 > For example, if your IP address is `10.124.139.25`
