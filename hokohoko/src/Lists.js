@@ -32,6 +32,7 @@ class Lists extends Component {
                 <Row>
                     <Col>
                         <h3>Your Product Lists</h3>
+                        <p>Add a new product or select an existing one to begin comparing!</p>
                     </Col>
                     <Col>
                         <AddItem onAdd={this.props.onAdd}/>

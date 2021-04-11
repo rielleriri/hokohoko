@@ -96,7 +96,8 @@ class OCR extends Component {
             <Container fluid>
                 <Row>
                     <Col>
-                        <h3>Add A New Comparison:</h3>
+                        <h3>Add A New Comparison</h3>
+                        <p>Upload a screenshot of a product checkout page!</p>
                     </Col>
                     <Col>
                         <Link className='float-right form-child-small back-link' to='/'>

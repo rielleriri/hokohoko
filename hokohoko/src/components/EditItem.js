@@ -26,6 +26,7 @@ class EditItem extends Component {
                 <Row>
                     <Col>
                         <h3>Edit Product Name</h3>
+                        <p>Change the product's name here!</p>
                     </Col>
                     <Col>
                         <Link className='form-child-small back-link' to='/'>
